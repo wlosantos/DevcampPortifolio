@@ -1,0 +1,19 @@
+%section.section
+  .container
+    .column.is-half
+      %h1.title.is-3 My Blog
+
+      %br
+
+      - @blogs.each do |blog|
+        = link_to blog_path(blog), class: 'link' do
+          %h2.subtitle.is-4= blog.title
+        .tags.has-addons
+          %span.tag.is-primary
+            = link_to 'edit', edit_blog_path(blog), class: 'has-text-white'
+          %span.tag.is-danger
+            = link_to 'delete', blog_path(blog), method: :delete, class: 'has-text-white' 
+        %p= truncate(blog.body, length: 50)
+        %br
+
+      = link_to 'New Article', new_blog_path, class: 'link'

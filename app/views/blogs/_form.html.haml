@@ -1,0 +1,16 @@
+= form_with(model: @blog, local: true) do |f|
+  .field
+    = f.label :title, class: 'label'
+    .control
+      = f.text_field :title, class: 'input', autofocus: true, placeholder: 'Your title here...'
+
+  .field
+    = f.label :body, class: 'label'
+    .control
+      = f.text_area :body, class: 'textarea'
+
+  .field
+    .control
+      = f.button :submit, class: 'button is-primary'
+
+  = link_to 'Back', :back

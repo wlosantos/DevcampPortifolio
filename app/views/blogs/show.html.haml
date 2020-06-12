@@ -1,0 +1,9 @@
+%section.section
+  .container
+    %h1.title.is-4= @blog.title
+    %p
+      = @blog.body
+    %br
+    = link_to 'Editar', edit_blog_path(@blog), class: 'button is-primary'
+    %br
+    = link_to 'Back', :back
