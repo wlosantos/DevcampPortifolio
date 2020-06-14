@@ -1,0 +1,9 @@
+%h2.title.is-2 Welcome my portifolio
+%hr
+- @portifolio_items.each do |portifolio|
+  %h1.title.is-5= portifolio.title
+  %h2.subtitle.is-6= portifolio.subtitle
+  %p= portifolio.body
+  %figure.image
+    = image_tag(portifolio.thumb_image, {style:'width: 250px'})
+  %br
