@@ -1,6 +1,6 @@
 class PortifoliosController < ApplicationController
 
-  # before_action :set_find, only: [:show, :edit, :update, :destroy]
+  before_action :set_find, only: [:edit, :update]
 
   def index
     @portifolio_items = Portifolio.all
@@ -16,6 +16,17 @@ class PortifoliosController < ApplicationController
       redirect_to @portifolio_item, notice: 'Created with success'
     else
       render 'new'
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @portifolio_item.update(portifolio_params)
+      redirect_to @portifolio_item, notice: 'Updated with success!'
+    else
+      render 'edit'
     end
   end
 
