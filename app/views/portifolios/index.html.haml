@@ -1,4 +1,5 @@
 %h2.title.is-2 Welcome my portifolio
+= link_to 'New Portifólio', new_portifolio_path
 %hr
 - @portifolio_items.each do |portifolio|
   %h1.title.is-5= portifolio.title
@@ -6,4 +7,7 @@
   %p= portifolio.body
   %figure.image
     = image_tag(portifolio.thumb_image, {style:'width: 250px'}) unless portifolio.thumb_image.nil?
+  %br
+  = link_to 'Edit', edit_portifolio_path(portifolio)
+  %br
   %br
