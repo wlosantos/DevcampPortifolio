@@ -5,5 +5,5 @@
   %h2.subtitle.is-6= portifolio.subtitle
   %p= portifolio.body
   %figure.image
-    = image_tag(portifolio.thumb_image, {style:'width: 250px'})
+    = image_tag(portifolio.thumb_image, {style:'width: 250px'}) unless portifolio.thumb_image.nil?
   %br

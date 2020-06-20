@@ -1,0 +1,12 @@
+= form_with model: @portifolio_item, local:true do |form|
+  .field
+    = form.label :title, class: 'label'
+    .control
+      = form.text_field :title, class: 'input', placeholder: 'your title', autofocus: true
+  .field
+    = form.label :subtitle, class: 'label'
+    .control
+      = form.text_area :body, class: 'textarea', placeholder: 'add your portifolio text'
+  .field
+    .actions
+      = form.button :submit, class: 'button is-primary'

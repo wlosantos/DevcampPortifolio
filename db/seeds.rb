@@ -1,6 +1,6 @@
 10.times do |blog|
   Blog.create!(
-    title: FFaker::Lorem.words,
+    title: FFaker::Lorem.phrase,
     body: FFaker::Lorem.paragraphs
   )
 end
@@ -17,7 +17,7 @@ end
     title: "Portifolio Title: #{portifolio}",
     subtitle: FFaker::Lorem.phrase,
     body: FFaker::Lorem.paragraphs,
-    main_image: 'http://via.placeholder.com/600x400',
-    thumb_image: 'http://via.placeholder.com/350x200'
+    main_image: 'https://via.placeholder.com/600x400',
+    thumb_image: 'https://via.placeholder.com/350x200'
   )
 end
