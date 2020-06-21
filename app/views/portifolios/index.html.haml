@@ -9,5 +9,7 @@
     = image_tag(portifolio.thumb_image, {style:'width: 250px'}) unless portifolio.thumb_image.nil?
   %br
   = link_to 'Edit', edit_portifolio_path(portifolio)
+  |
+  = link_to 'Delete Portifolio Item', portifolio_path(portifolio), method: :delete, data:{ confirm: 'You are sure?' }
   %br
   %br

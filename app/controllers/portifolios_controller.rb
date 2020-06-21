@@ -1,6 +1,6 @@
 class PortifoliosController < ApplicationController
 
-  before_action :set_find, only: [:show, :edit, :update]
+  before_action :set_find, only: [:show, :edit, :update, :destroy]
 
   def index
     @portifolio_items = Portifolio.all
@@ -31,6 +31,11 @@ class PortifoliosController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @portifolio_item.destroy
+    redirect_to portifolios_path
   end
 
   private
