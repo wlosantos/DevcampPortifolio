@@ -2,11 +2,10 @@ Rails.application.routes.draw do
 
   resources :blogs
   resources :portifolios
-  
-  get 'pages/home'
-  get 'pages/about'
-  get 'pages/contact'
 
-  root 'blogs#index'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+
+  root 'pages#home'
 
 end
