@@ -1,9 +1,12 @@
 class PortifoliosController < ApplicationController
 
-  before_action :set_find, only: [:edit, :update]
+  before_action :set_find, only: [:show, :edit, :update]
 
   def index
     @portifolio_items = Portifolio.all
+  end
+
+  def show
   end
 
   def new
