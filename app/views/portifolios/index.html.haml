@@ -2,7 +2,7 @@
 = link_to 'New Portifólio', new_portifolio_path
 %hr
 - @portifolio_items.each do |portifolio|
-  %h1.title.is-5= link_to portifolio.title, portifolio_path(portifolio)
+  %h1.title.is-5= link_to portifolio.title, portifolio_show_path(portifolio)
   %h2.subtitle.is-6= portifolio.subtitle
   %p= portifolio.body
   %figure.image
