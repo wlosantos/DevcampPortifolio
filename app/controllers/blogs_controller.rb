@@ -1,12 +1,13 @@
 class BlogsController < ApplicationController
 
-  before_action :set_find, only: [:show, :edit, :update, :destroy]
+  before_action :set_find, only: [:edit, :update, :destroy]
 
   def index
     @blogs = Blog.orderDescendent
   end
 
   def show
+    @blog = Blog.friendly.find(params[:id])
   end
 
   def new
@@ -40,7 +41,7 @@ class BlogsController < ApplicationController
 
   private
     def set_find
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
     end
 
     def blog_params
